@@ -1,47 +1,5 @@
-# Sheet WebView Plugin
+## Disclaimer
 
-Show a webview sheet on your flutter desktop application.
+**Important:** By using this code,  the author will not be liable for any damages, including but not limited to direct, indirect, special, or consequential damages, arising from the use or misuse of this code. 
 
-|          |       |     |
-| -------- | ------- | ---- |
-| macOS    | ✅     |  WKWebview |
-
-## Getting Started
-
-1. modify your `main` method.
-   ```dart
-   import 'package:sheet_webview_plugin/sheet_webview.dart';
-   
-   void main() async {
-     WidgetsFlutterBinding.ensureInitialized();
-     
-     // Add this your main method.
-     // used to show a webview title bar.
-     if (runWebViewTitleBarWidget(args)) {
-       return;
-     }
-   
-     runApp(MyApp());
-   }
-   
-   ```
-
-2. launch WebView Dialog
-
-   ```dart
-    SheetWebView sheetWebView = SheetWebView();
-          WebViewDialog? webViewDialog = await sheetWebView.init();
-          if (webViewDialog != null) {
-            webViewDialog
-              ..setOnUrlRequestCallback((url) {
-                debugPrint(url);
-                return true;
-              })
-              ..setApplicationNameForUserAgent("SheetWebViewExample/1.0.0")
-              ..launch("www.example.com");
-          }
-   ```
-
-## License
-
-see [LICENSE](./LICENSE)
+This project is provided for educational and informational purposes only how to show WkWebView as a dialog in macOS.
